@@ -41,6 +41,8 @@ object ExploratoryAnalysis extends App {
     val casted = df_w.withColumn("humidity", $"humidity".cast(DoubleType))
     val df = discretizer_h.fit(casted).transform(casted).drop("humidity")
     
+    
+    
     //df.show()
     
 
